@@ -1,0 +1,60 @@
+NVM COMANDOS
+  lista las versiones de nvm
+      nvm list
+  cambia a la version que se ingresa
+    nvm use 18.1.0
+  instala la version que se ingresa
+    nvm install 18.1.0
+  muestra todas la opciones que se pueden usar en el terminal
+    nvm
+
+muestra donde que carpeta estamos ubicados
+  pwd
+muestra los archivos que estan en el directorio actual
+  ls 
+crea una carpeta con el nombre CARPETA1
+  mkdir CARPETA1
+permiter ir a al directorio que se ingresa
+  cd CARPETA1
+permite ir atras en 1 directorio
+  cd ..
+limpiar la consola
+  clear
+crea un archivo, importante agregar la extension
+  touch mio.js
+elimina un archivo, NO DIRECTORIO
+  rm mio.js
+elimina un directorio
+  rm -r CARPETA1
+muestra un listado de las opciones del comando ingresado
+  ls --help
+
+TOKEN
+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
+
+comando para inicializar un repositorio local en el repositorio donde se encuentre la linea de comando, es muy importante, al usar el comando "pwd" debe registra un archivo oculto .git
+  git init 
+
+comando para que nuestro repositorio sepa de la existencia de un archivo o de sus últimos cambios, no almacena las actualizaciones de forma definitiva, únicamente las guarda en algo que conocemos como “Staging Area” (área de montaje o ensayo). Se puede armar como git add ArchivoEjemplo.js (solo agrega ese archivo) o git add (agrega todos los archivos modificados de la carpeta donde estas con el punto.
+agrega un archivo al repositorio local
+  git add script.js
+
+comando para almacenar definitivamente todos los cambios que por ahora viven en el staging área. En el mensaje ponemos el mensaje que explica los cambios commiteados.
+  git commit -m "mensaje" 
+
+comando para mandar nuestros commits a un servidor remoto.
+  git push
+
+git status: ofrece una descripción del estado de los archivos.
+
+git pull: sirve para recibir cambios de repositorio remoto a local.
+
+actualiza los commits ingresado, actualizando los cambio en GITHUB
+  git push origin main
+
+VINCULAR UN REPOSITORIO LOCAL(GIT) A UN REMOTO EN (GITHUB)
+
+
+
+
+
