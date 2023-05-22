@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- head: si necesitamos un archivo JS hay q incluirlo aqui, aqui debemos colocar los elementos que vamos a necesitar pero que no se ven en la pagina -->
+    <head>
+      <title>Mi pagina Web</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- La etiqueta <meta> se coloca dentro de la sección <head> del documento HTML -->
+        <!-- charset: especifica la codificación de caracteres del documento HTML. -->
+      <meta charset="UTF-8">
+    </head>
+    <body>
+        <main>
+            <header>Bienvenidos a mi pagina web</header>
+            <h2>Bienvenidos</h2>
+            <section>
+                <!-- podemos enlazar a secciones internas -->
+                <a href="#parrafo1">buscar parrado</a> 
+            </section>
+            <p id="parrafo1">Esta es una intruduccion de mi pagina web, para poder desarrollame como programador o desarrollador de entornos web, gracias por la oportunidad de poder desarrollarme como programdor para poder crecer intelectualmente como profesional</p>
+            
+            <section>
+                <!-- img: inserta una imagen
+                    *src=puede ser un link o un archivo 
+                    *alt=un mensaje que aparece cuando no se puedo cargar la imagen 
+                    *title=muestra la descripcion que coloques cuando pasas el curso por encima de la imagen
+                    *width y height=configura las dimensiones de la imagen-->
+                <figure>
+                  <img src="gato1.jpg" alt="Este es un gato mañoso jeje" title="un gatito" width="150" height="150">
+                  <!-- figcaption:agrega una descripcion a la imagen -->
+                  <figcaption>es un gato</figcaption>
+                </figure>
+                <!-- a: Crea un link
+                    *href=puede ser un link o un archivo de destino
+                    *taget="_blank"  no utiliza tu ventana actual abre una nueva 
+                    *rel="noopener noreferrer"" en un enlace, se está especificando que no se debe permitir que la página vinculada acceda a la ventana actual y que no se debe enviar información sobre la página actual al servidor de la página vinculada-->
+                <a href="gato2.jpg" target="_blank" rel="noopener noreferrer"><img src="gato2.jpg" alt="Este es otro gatito" width="200" height="200"></a>
+                <img src="https://bit.ly/fcc-relaxing-cat" alt="este es el ultimo gato ps" >
+                <nav>
+                    <a href="gato1.jpg" title="gato1">hola</a><br>
+                    <a href="gato2.jpg">gato2.jpg</a><br>
+                    <a href="gato3.jpg">gato3.jpg</a><br>
+                </nav>
+                <section>
+                  <h3>Listas de Gatos</h3>
+                  <!-- fieldset:crea un marco agrupando a todos los elementos contenidos -->
+                  <fieldset>
+                    <!-- legend: actua como un titulo para el campo fieldset, estas 2 etiquetas estan relacionadas -->
+                    <legend>Caracteristicas de los gatos</legend>
+                    <p>Cosas que los gatos aman</p>
+                    <!-- ul:listas no ordenadas
+                        no se enumeran -->
+                        <!-- class:nos permite vincular con con css  -->
+                    <ul class="lista-gatos">
+                        <!--li: elemento de la lista  -->
+                      <li>MENTA GATUNA</li>
+                      <li>APUNTADORES LAZER</li>
+                      <li>LASANA</li>
+                    </ul>
+                    <p>cosas que lo gatos odian</p>
+                    <!-- ol:lista ordenada -->
+                    <ol>
+                      <li>tratamiento antipulga</li>
+                      <li>truenos</li>
+                      <li>otros gatos</li>
+                    </ol>
+                  </fieldset>
+                </section>
+            </section>
+            <!-- hr:agrega una linea horizontal  -->
+            <hr>
+            <!-- strong:pone en negrita un texto -->
+            <p>hola como estas <strong>amigos querido</strong></p>
+            <!-- em:letra cursiva -->
+            <p>hola como estas <em>querido amigo</em></p>
+            <!-- s:tacha el texto -->
+            <p>hola como estas <s>querido amigo</s></p>
+            <!-- form:crea un formulario 
+                  action:envia los datos ingresado a un archivo destino-->
+            <form action="/enviar.respuesta">
+              <!-- type=tipo de texto, estos son algunos valores.
+                text: para entrada de texto libre
+                password: para entrada de texto oculto (por ejemplo, para contraseñas).
+                number: para entrada de números.
+                email: para entrada de correos electrónicos.
+                date: para entrada de fechas.
+                file: para carga de archivos.
+                radio: crea un boton para seleccion
+                checkbox: para una casilla de verificación.
+                submit: para enviar un formulario.
+                reset: para limpiar un formulario. -->
+                <!--placeholder: muestra un texto dentro de la interface del input -->
+                <!-- required:no permite enviar si no se lleno el campo -->
+              <input type="text" placeholder="Ingresar aqui" required>
+              <!-- button:crea un boton, el comportamiento predeterminado de hacer click en el boton sin ningun atributo  es enviar el formulario a la ubicacion especificada por el atributo "action" -->
+              <button type="submit">ENVIAR</button>
+                <!-- radio: crea un boton para seleccion -->
+              <input type="radio">Interior
+              <input type="radio">Exterior
+              <br>
+              <!-- label: permite realizar seleccionar aunque hagamos click en el texto 
+                  for:asocia la etiqueda label a el elemento especificado por el id del elemento-->
+              <label for="Interior"><input type="radio" id="Interior">Interiors</label>
+              <label for="Exterior"><input type="radio" id="Exterior">Exteriors</label>
+              <!-- name:para un grupo de input podemos hacer que solo se marque una opcion para type="radio"-->
+              <br>
+              <label for="Iterior"><input type="radio" id="Iterior" name="opciones">Interiors</label>
+              <label for="Eterior"><input type="radio" id="Eterior" name="opciones">Exteriors</label>
+              <!-- value: al darle nombre al submit ese el el valor que el exporta a otra pagina -->
+              <!-- CASILLAS DE VERIFICACION -->
+              <!-- type="checkbox":casillas de check, podemos agruparlas con el atributo "name" pero se pueden marcar mas de 1 opcion dentro del grupo -->
+              <!-- checked:se asigna a la etiqueta input para que el check este marcado por defecto -->
+              <br>
+              <label for="opcion1"><input id="opcion1" type="checkbox" name="opciones">Opcion 1</label>
+              <label for="opcion2"><input type="checkbox" id="opcion2" name="opciones">Opcion 2</label>
+              <label for="opcion3"><input type="checkbox" id="opcion3" name="opciones">Opcion 3</label>
+              <br>
+              <!-- checked:se asigna a la etiqueta input para que el check este marcado por defecto -->
+              <label for="opcion1"><input id="opcion1" type="checkbox" name="opciones"checked>Opcion 1</label>
+              <label for="opcion2"><input type="checkbox" id="opcion2" name="opciones" checked>Opcion 2</label>
+              <label for="opcion3"><input type="checkbox" id="opcion3" name="opciones">Opcion 3</label>
+              <br>
+              <br>
+              <!-- value="informacion enviada":es los datos que se envia al servidor cuando se procede a apretar el boton de ENVIAR -->
+              <!-- etiqueta <div>: todas la configuraciones de CSS se ejecutaran en este "contenedor" -->
+              <div>
+                <label for="opcion1">
+                  <input id="opcion1" type="checkbox" name="opciones"checked value="opcion_uno">Opcion 1
+                </label><br>
+                <label for="opcion2">
+                  <input type="checkbox" id="opcion2" name="opciones" checked value="opcion_dos">Opcion 2
+                </label><br>
+                <label for="opcion3">
+                  <input type="checkbox" id="opcion3" name="opciones" value="opcion_tres">Opcion 3
+                </label><br>
+                <button type="submit">ENVIAR</button><br>
+              </div>
+            </form>
+        </main>
+        <!-- footer= pie de pagina -->
+        <footer>
+          <!-- small:hace q las letras sean mas pequeñas -->
+          <small>
+              <p>para mas inforamacion visita 
+                <a href="joan.herrera@speedcast.com" target="_blank">joan.herrera@speedcast.com
+                </a> 
+              </p>
+          </small>
+        </footer>
+    </body>
+</html>
